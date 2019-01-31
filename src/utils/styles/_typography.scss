@@ -1,0 +1,58 @@
+html {
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1 {
+    font-family: 'Uni Sans', serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Bebas Neue', serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+li {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: #222;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 375px) {
+    h1 { font-size: 42px; }
+    h2 { font-size: 48px; }
+}
+
+@media only screen and (min-width: 768px) {
+    h1 { font-size: 72px; }
+    h2 { font-size: 60px; }
+}
+

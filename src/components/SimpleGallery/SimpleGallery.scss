@@ -1,0 +1,41 @@
+.simpleGallery {
+    padding: 60px 0;
+
+    &__images {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        overflow-x: hidden;
+    }
+
+    &__image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px;
+        min-width: 200px;
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &:hover {
+            svg {
+                opacity: 1;
+            }
+        }
+
+        svg {
+            fill: #fff;
+            width: 50%;
+            opacity: 0.3;
+            transition: 0.2s ease-in-out;
+        }
+    }
+
+    &__cta {
+        margin: 0 auto;
+    }
+}

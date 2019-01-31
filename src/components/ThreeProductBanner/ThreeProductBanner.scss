@@ -1,0 +1,97 @@
+.threeProductBanner {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #34BCE6;
+
+    &__banners {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 30px;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #50D6FF;
+        padding: 50px 20px;
+        margin: 10px 0;
+        color: #fff;
+        border-radius: 4px;
+        font-family: 'Bebas Neue', sans-serif;
+        box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+
+        &:nth-child(2) {
+            background-color: #EB519D;
+            transform: scale(1);
+            z-index: 1;
+        }
+
+        &__title {
+            font-size: 28px;
+            letter-spacing: 10px;
+            text-shadow: 0px 4px 10px rgba(17,17,17,0.2);
+        }
+
+        &__price {
+            letter-spacing: 10px;
+
+            span {
+                font-size: 12px;
+                font-weight: 300;
+                padding-right: 15px;
+            }
+        }
+
+        &__list {
+            margin-bottom: 15px;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin: 10px auto;
+                letter-spacing: 3px;
+                font-size: 14px;
+            }
+
+            svg {
+                fill: #fff;
+                margin-right: 15px;
+            }
+        }
+
+        &__cta {
+            padding: 15px 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .threeProductBanner {
+        .product {
+            padding: 50px 40px;
+            
+            &__title {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .threeProductBanner {
+        &__banners {
+            flex-direction: row;
+        }
+
+        .product {
+            margin: 0;
+
+            &:nth-child(2) {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.social {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 35px;
+        height: 35px;
+        fill: #fff;
+        margin: 0 10px;
+    }
+
+    .linkedin {
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

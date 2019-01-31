@@ -1,0 +1,198 @@
+.header {
+    position: absolute;
+    width: 100%;
+    font-family: 'Uni Sans', sans-serif;
+    z-index: 10;
+
+    &--background {
+        position: relative;
+        background-color: #34BCE6;
+    }
+
+    .mobileHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 15px 5%;
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -100vh;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fffffff0;
+            transition: 0.3s ease-in-out;
+            z-index: -1;
+    
+            &.active { top: 0; }
+        }
+    
+        li {
+            text-align: center;
+            list-style-type: none;
+            padding: 15px 0;
+    
+            a {
+                color: #34BCE6;
+                font-size: 24px;
+                letter-spacing: 5px;
+            }
+        }
+
+        &__logo {
+            width: 50px;
+    
+            svg {
+                fill: #fff;
+            }
+        }
+
+        &__flyout {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+    
+            &:hover {
+                p {
+                    color: #EB519D;
+                }
+    
+                svg {
+                    fill: #EB519D;
+                }
+            }
+            
+            p {
+                position: relative;
+                top: 10px;
+                color: #fff;
+                font-size: 14px;
+                transition: 0.2s ease-in-out;
+            }
+    
+            svg {
+                width: 50px;
+                height: 50px;
+                fill: #fff;
+                transition: 0.2s ease-in-out;
+            }
+        }
+    }
+
+    &__container {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 15px 5%;
+    }
+
+    &__logo {
+        width: 100px;
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    &__nav {
+        display: inline-flex;
+
+        li {
+            padding: 5px 20px;
+
+            &:hover {
+                a {
+                    color: #EB519D;
+                }
+            }
+        }
+
+        a {
+            color: #fff;
+            transition: 0.2s ease-in-out;
+        }
+    }
+
+    &__flyout {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            p {
+                color: #EB519D;
+            }
+
+            svg {
+                fill: #EB519D;
+            }
+        }
+        
+        p {
+            color: #fff;
+            padding-right: 10px;
+            transition: 0.2s ease-in-out;
+        }
+
+        svg {
+            fill: #fff;
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.hamburger {
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 200;
+
+    .top { stroke-dasharray: 40 139; }
+    .bottom { stroke-dasharray: 40 180; }
+
+    &.active {
+        transform: rotate(45deg);
+
+        .top { stroke-dashoffset: -98px; }
+        .bottom { stroke-dashoffset: -138px; }
+        .line { stroke: #EB519D;}
+    }
+
+    .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke:#fff;
+        stroke-width: 5.5;
+        stroke-linecap: round;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        &__container {
+            display: flex;
+        }
+
+        .mobileHeader {
+            display: none;
+        }
+    }
+}

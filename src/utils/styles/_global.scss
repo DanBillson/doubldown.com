@@ -1,0 +1,49 @@
+.button {
+    display: block;
+    width: fit-content;
+    padding: 15px 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &--primary {
+        border: 2px solid #34BCE6;
+        background-color: #EB519D;
+        color: #fff;
+
+        &:hover {
+            background-color: #34BCE6;
+        }
+    }
+
+    &--secondary {
+        border: 1px solid #34BCE6;
+        background-color: #34BCE6;
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+            background-color: #EB519D;
+        }
+    }
+
+    &--tertiary {
+        border: 1px solid #EB519D;
+        background-color: #EB519D;
+        color: #fff;
+
+        &:hover {
+            background-color: #fff;
+            color: #EB519D;
+        }
+    }
+}
+
+.disable-scroll {
+    height: 100%;
+    overflow: hidden;
+}

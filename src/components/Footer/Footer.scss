@@ -1,0 +1,35 @@
+.footer {
+    .social {
+        justify-content: center;
+        padding: 20px 0;
+
+        svg {
+            fill: #34BCE6;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #EB519D;
+        color: #fff;
+        font-family: 'Bebas Neue', sans-serif;
+
+        ul {
+            padding: 40px 0;
+            text-align: center;
+
+            li {
+                font-size: 16px;
+                letter-spacing: 4px;
+                
+                &:first-child {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.productBanners {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 60px 0;
+
+    .productBanner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: #34BCE6;
+        color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+
+        &:nth-child(even) {
+            background-color: #EB519D;
+
+            
+
+            .productBanner__cta {
+                background-color: #34BCE6;
+
+                &:hover {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        &__price {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            span {
+                font-size: 12px;
+                font-weight: 300;
+                padding-right: 15px;
+            }
+        }
+
+        &__image {
+            position: relative;
+            width: 40%;
+            padding: 30px;
+
+            svg {
+                width: 100%;
+                max-width: 375px;
+                height: 100%;
+                margin-top: 50px;
+            }
+        }
+
+        &__info {
+            padding: 20px 25px 50px;
+        }
+
+        &__title {
+            text-align: center;
+            text-shadow: 0px 4px 10px rgba(17,17,17,0.2);
+        }
+
+        &__text {
+            max-width: 600px;
+            color: #fff;
+            padding: 30px 0 50px ;
+        }
+
+        &__cta {
+            margin: 0 auto;
+        }
+    }
+}
+
+.pink {
+    position: absolute;
+    top: 5%;
+    right: -20%;
+    width: 40%;
+    height: 100vh;
+    background-image: url('../../assets/images/pink.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.blue {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    background-image: url('../../assets/images/blue.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 768px) {
+    .productBanners {
+        .productBanner {
+            flex-direction: row;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                .productBanner__info {
+                    padding: 70px 0 70px 50px;
+                }
+            }
+
+            &__info {
+                padding: 70px 0;
+            }
+    
+            &__title {
+                text-align: left;
+                padding-top: 50px;
+            }
+    
+            &__text {
+                padding: 30px 50px 50px 0;
+            }
+    
+            &__image {
+                svg {
+                    margin-top: 0;
+                }
+            }
+
+            &__cta {
+                margin: 0;
+            }
+        }
+    }
+}
